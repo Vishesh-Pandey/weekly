@@ -45,7 +45,7 @@ const Signup = () => {
 
   return (
     <div className="w-1/4 text-center m-auto mt-14 p-4 ">
-      <h1 className="text-center text-slate-600 text-2xl font-extrabold">Get Registered</h1>
+      <h1 className="text-center text-slate-600 text-2xl font-extrabold">Register</h1>
       <form onSubmit={handleSubmit}>
         <div className="my-2">
           <input
