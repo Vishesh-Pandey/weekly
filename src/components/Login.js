@@ -56,7 +56,7 @@ function Login() {
           to="/"
           className="text-blue-500 shadow-sm w-full my-2 p-2 hover:underline hover:text-blue-800"
         >
-          Don't have account? Get Registered
+          New User? Get Registered
         </Link>
       </form>
     </div>
