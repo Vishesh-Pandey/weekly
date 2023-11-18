@@ -10,10 +10,10 @@ function App() {
   return (
     <div className="App">
       <div className="text-center">
-        <Link to="/login" className="text-pink-500 font-extrabold">
+        <Link to="/login" className="text-blue-500 font-extrabold text-lg">
           Weekly
         </Link>
-        <p className="text-pink-300 font-bold">No Dates, Just Weekdays!</p>
+        <p className="text-green-500 font-bold">No Dates, Just Weekdays!</p>
       </div>
       <Routes>
         <Route exact path="/" element={<Signup />} />
