@@ -122,9 +122,10 @@ function Schedule() {
       >
         Copy schedule link to share
       </button>
-
-      <div className="bg-gray-300 px-2 m-2 rounded-md text-center text-2xl">
-        Current Time Zone : {userData.timezone}{" "}
+      <div className="flex items-center justify-center">
+        <div className=" w-1/2 bg-gray-300 px-2 m-2 rounded-md text-center text-2xl">
+          Current Time Zone : {userData.timezone}{" "}
+        </div>
       </div>
       <div className="timezones bg-gray-300 m-3 p-2">
         <button
@@ -201,13 +202,12 @@ function Schedule() {
                 {days.map((day) => (
                   <td
                     key={`${day}-${time}`}
-                    className={`border px-4 py-2 rounded-md ${
-                      userData.schedule[day].find(
-                        (slot) => slot.timeSlot === time
-                      ).label === "free"
-                        ? "bg-green-300"
-                        : "bg-red-300"
-                    }`}
+                    className={`border px-4 py-2 rounded-md ${userData.schedule[day].find(
+                      (slot) => slot.timeSlot === time
+                    ).label === "free"
+                      ? "bg-green-300"
+                      : "bg-red-300"
+                      }`}
                   >
                     <div className="d-flex flex justify-between">
                       <span>
@@ -234,7 +234,7 @@ function Schedule() {
                             onClick={() => {
                               editSchedule(day, time, "free");
                             }}
-                            className="text-white bg-green-600 px-1 rounded-md"
+                            className="text-white bg-green-500 px-1 rounded-md hover:bg-green-700"
                           >
                             Free
                           </button>
