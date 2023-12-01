@@ -123,59 +123,68 @@ function Schedule() {
         Copy schedule link to share
       </button>
       <div className="flex items-center justify-center">
-        <div className=" w-1/2 bg-gray-300 px-2 m-2 rounded-md text-center text-2xl">
+        <div className=" w-1/2 text-white group group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-rose-300 hover:before:[box-shadow:_20px_20px_20px_30px_#a21caf] duration-500 before:duration-500 hover:duration-500  hover:after:-right-8 hover:before:right-12 hover:before:-bottom-8 hover:before:blur origin-left hover:decoration-2 hover:text-xl relative bg-neutral-800  border p-3 text-base font-bold rounded-lg  overflow-hidden  before:absolute before:w-12 before:h-12 before:content[''] before:right-1 before:top-1 before:z-10 before:bg-violet-500 before:rounded-full before:blur-lg  after:absolute after:z-10 after:w-20 after:h-20 after:content['']  after:bg-rose-300 after:right-8 after:top-3 after:rounded-full after:blur-lg text-center mt-2 mb-1"
+          style={{
+            boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.7)"
+          }}>
           Current Time Zone : {userData.timezone}{" "}
         </div>
       </div>
-      <div className="timezones bg-gray-300 m-3 p-2">
-        <button
-          onClick={() => {
-            changeTimeZone("Asia/Kolkata");
-          }}
-          className="bg-gray-300 px-2 mx-2 rounded-md border-4 hover:bg-black hover:text-white"
-        >
-          IST
-        </button>
-        <button
-          onClick={() => {
-            changeTimeZone("Europe/London");
-          }}
-          className="bg-gray-300 px-2 mx-2 rounded-md border-4 hover:bg-black hover:text-white"
-        >
-          GMT - Europe/London
-        </button>
-        <button
-          onClick={() => {
-            changeTimeZone("America/Los_Angeles");
-          }}
-          className="bg-gray-300 px-2 mx-2 rounded-md border-4 hover:bg-black hover:text-white"
-        >
-          PST - America/Los_Angeles
-        </button>
-        <button
-          onClick={() => {
-            changeTimeZone("America/Denver");
-          }}
-          className="bg-gray-300 px-2 mx-2 rounded-md border-4 hover:bg-black hover:text-white"
-        >
-          MST - America/Denver
-        </button>
-        <button
-          onClick={() => {
-            changeTimeZone("America/Chicago");
-          }}
-          className="bg-gray-300 px-2 mx-2 rounded-md border-4 hover:bg-black hover:text-white"
-        >
-          CST - America/Chicago
-        </button>
-        <button
-          onClick={() => {
-            changeTimeZone("America/New_York");
-          }}
-          className="bg-gray-300 px-2 mx-2 rounded-md border-4 hover:bg-black hover:text-white"
-        >
-          EST - America/New York
-        </button>
+      <div className="flex items-center justify-center">
+        <div className="w-3/4 text-center timezones bg-center bg-cover bg-no-repeat mt-2 mb-4 p-2"
+          style={{
+            backgroundImage: "url('https://4.bp.blogspot.com/-BEiGsHaJMxo/WxSaGfU4XTI/AAAAAAAAtgE/PrfYfRwJNK0ASZOxk9-ZfY2mjvLLRILuwCK4BGAYYCw/s1600/picture-723771.jpg')",
+            boxShadow: "2px 2px 5px rgba(0, 0, 0, 0.9)"
+          }}>
+          <button
+            onClick={() => {
+              changeTimeZone("Asia/Kolkata");
+            }}
+            className="bg-gray-300 px-2 mx-2 rounded-md border-4 hover:bg-sky-300 hover:text-black hover:transition-transform transform-gpu"
+          >
+            IST
+          </button>
+          <button
+            onClick={() => {
+              changeTimeZone("Europe/London");
+            }}
+            className="bg-gray-300 px-2 mx-2 rounded-md border-4 hover:bg-sky-300 hover:text-black"
+          >
+            GMT - Europe/London
+          </button>
+          <button
+            onClick={() => {
+              changeTimeZone("America/Los_Angeles");
+            }}
+            className="bg-gray-300 px-2 mx-2 rounded-md border-4 hover:bg-sky-300 hover:text-black"
+          >
+            PST - America/Los_Angeles
+          </button>
+          <button
+            onClick={() => {
+              changeTimeZone("America/Denver");
+            }}
+            className="bg-gray-300 px-2 mx-2 rounded-md border-4 hover:bg-sky-300 hover:text-black"
+          >
+            MST - America/Denver
+          </button>
+          <button
+            onClick={() => {
+              changeTimeZone("America/Chicago");
+            }}
+            className="bg-gray-300 px-2 mx-2 rounded-md border-4 hover:bg-sky-300 hover:text-black"
+          >
+            CST - America/Chicago
+          </button>
+          <button
+            onClick={() => {
+              changeTimeZone("America/New_York");
+            }}
+            className="bg-gray-300 px-2 mx-2 rounded-md border-4 hover:bg-blue-300 hover:text-black"
+          >
+            EST - America/New York
+          </button>
+        </div>
       </div>
 
       <div
@@ -206,7 +215,7 @@ function Schedule() {
                       (slot) => slot.timeSlot === time
                     ).label === "free"
                       ? "bg-green-300"
-                      : "bg-red-300"
+                      : "bg-red-400"
                       }`}
                   >
                     <div className="d-flex flex justify-between">
