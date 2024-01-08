@@ -1,20 +1,17 @@
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import Dashboard from "./components/Dashboard";
 import Share from "./features/share/Share";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div className="App">
-      <div className="text-center">
-        <Link to="/login" className="text-pink-500 font-extrabold">
-          Weekly
-        </Link>
-        <p className="text-pink-300 font-bold">No Dates, Just Weekdays!</p>
-      </div>
+      <Navbar />
+      <hr />
       <Routes>
         <Route exact path="/" element={<Signup />} />
         <Route exact path="/login" element={<Login />} />
